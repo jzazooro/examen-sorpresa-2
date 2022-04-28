@@ -1,3 +1,4 @@
+import csv
 from clases.weapon_type import *
 from clases.pokemon import *
 from clases.agua import *
@@ -12,7 +13,7 @@ def entrenadoruno(entrenador):
             leer= csv.reader('coach_1_pokemons.csv')
             info=list(leer)
             for temp_pokemon_csv in info:
-                pokemon_csv_a_la_lista = Pokemon(int(temp_pokemon_csv[0]) , temp_pokemon_csv[1]) , WeaponType(temp_pokemon_csv [2]) , int(temp_pokemon_csv[3]) , int(temp_pokemon_csv[4]) , int(temp_pokemon_csv[5]))
+                pokemon_csv_a_la_lista = Pokemon(int(temp_pokemon_csv[0]) , temp_pokemon_csv[1]) , WeaponType(temp_pokemon_csv [2]) , int(temp_pokemon_csv[3]) , int(temp_pokemon_csv[4]) , int(temp_pokemon_csv[5])
                 entrenador.append(pokemon_csv_a_la_lista)
     except:
         print("ha habido un error")
@@ -24,7 +25,7 @@ def entrenadordos(entrenador):
             leer= csv.reader('coach_2_pokemons.csv')
             infodos=list(leer)
             for temp_pokemon_csv in infodos:
-                pokemon_csv_a_la_lista = Pokemon(int(temp_pokemon_csv[0]) , temp_pokemon_csv[1]) , WeaponType(temp_pokemon_csv [2]) , int(temp_pokemon_csv[3]) , int(temp_pokemon_csv[4]) , int(temp_pokemon_csv[5]))
+                pokemon_csv_a_la_lista = Pokemon(int(temp_pokemon_csv[0]) , temp_pokemon_csv[1]) , WeaponType(temp_pokemon_csv [2]) , int(temp_pokemon_csv[3]) , int(temp_pokemon_csv[4]) , int(temp_pokemon_csv[5])
                 entrenador.append(pokemon_csv_a_la_lista)
     except:
         print("ha habido un error")
